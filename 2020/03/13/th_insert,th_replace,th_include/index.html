@@ -5,22 +5,19 @@
   
 
   
-  <title>mybatis逆向生成器配置文件中寻找mysql驱动位置classPathEntry中的location项 | Snoopy的博客</title>
+  <title>th_insert,th_replace,th_include | Snoopy的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="在左侧project边栏的External Libraries中找到mysql的驱动右键选择copy path然后就是复制咯，将配置文件中的location项覆盖掉就好">
+  <meta name="description" content="这三者都可以引用抽取出来的th:fragment中的内容，例如 &lt; footter th:fragment&#x3D;copy&gt;...&lt;&#x2F;footer&gt;123&lt;div th:insert&#x3D;&quot;footer :: copy&quot;&gt;&lt;&#x2F;div&gt; &lt;div th:replace&#x3D;&quot;footer :: copy&quot;&gt;&lt;&#x2F;div&gt; &lt;div th:">
 <meta property="og:type" content="article">
-<meta property="og:title" content="mybatis逆向生成器配置文件中寻找mysql驱动位置classPathEntry中的location项">
-<meta property="og:url" content="https://snoopy-code.github.io/2020/03/13/mybatis%E9%80%86%E5%90%91%E7%94%9F%E6%88%90%E5%99%A8%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E4%B8%AD%E5%AF%BB%E6%89%BEmysql%E9%A9%B1%E5%8A%A8%E4%BD%8D%E7%BD%AEclassPathEntry%E4%B8%AD%E7%9A%84location%E9%A1%B9/index.html">
+<meta property="og:title" content="th_insert,th_replace,th_include">
+<meta property="og:url" content="https://snoopy-code.github.io/2020/03/13/th_insert,th_replace,th_include/index.html">
 <meta property="og:site_name" content="Snoopy的博客">
-<meta property="og:description" content="在左侧project边栏的External Libraries中找到mysql的驱动右键选择copy path然后就是复制咯，将配置文件中的location项覆盖掉就好">
+<meta property="og:description" content="这三者都可以引用抽取出来的th:fragment中的内容，例如 &lt; footter th:fragment&#x3D;copy&gt;...&lt;&#x2F;footer&gt;123&lt;div th:insert&#x3D;&quot;footer :: copy&quot;&gt;&lt;&#x2F;div&gt; &lt;div th:replace&#x3D;&quot;footer :: copy&quot;&gt;&lt;&#x2F;div&gt; &lt;div th:">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20181128190847732.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JhYnliYWJ5dXA=,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20181128190951102.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JhYnliYWJ5dXA=,size_16,color_FFFFFF,t_70">
-<meta property="article:published_time" content="2020-03-13T06:55:29.456Z">
-<meta property="article:modified_time" content="2020-03-13T06:54:12.458Z">
+<meta property="article:published_time" content="2020-03-13T07:30:58.277Z">
+<meta property="article:modified_time" content="2020-03-13T07:30:38.403Z">
 <meta property="article:author" content="Snoopy">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20181128190847732.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JhYnliYWJ5dXA=,size_16,color_FFFFFF,t_70">
   
     <link rel="alternate" href="/atom.xml" title="Snoopy的博客" type="application/atom+xml">
   
@@ -73,10 +70,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-mybatis逆向生成器配置文件中寻找mysql驱动位置classPathEntry中的location项" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-th_insert,th_replace,th_include" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/03/13/mybatis%E9%80%86%E5%90%91%E7%94%9F%E6%88%90%E5%99%A8%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E4%B8%AD%E5%AF%BB%E6%89%BEmysql%E9%A9%B1%E5%8A%A8%E4%BD%8D%E7%BD%AEclassPathEntry%E4%B8%AD%E7%9A%84location%E9%A1%B9/" class="article-date">
-  <time datetime="2020-03-13T06:55:29.456Z" itemprop="datePublished">2020-03-13</time>
+    <a href="/2020/03/13/th_insert,th_replace,th_include/" class="article-date">
+  <time datetime="2020-03-13T07:30:58.277Z" itemprop="datePublished">2020-03-13</time>
 </a>
     
   </div>
@@ -87,7 +84,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      mybatis逆向生成器配置文件中寻找mysql驱动位置classPathEntry中的location项
+      th_insert,th_replace,th_include
     </h1>
   
 
@@ -95,12 +92,16 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>在左侧<strong>project</strong>边栏的<strong>External Libraries</strong>中找到<strong>mysql</strong>的驱动<img src="https://img-blog.csdnimg.cn/20181128190847732.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JhYnliYWJ5dXA=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述">右键选择<strong>copy path</strong><br><img src="https://img-blog.csdnimg.cn/20181128190951102.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JhYnliYWJ5dXA=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述">然后就是复制咯，将配置文件中的location项覆盖掉就好</p>
+        <pre><code>这三者都可以引用抽取出来的th:fragment中的内容，例如
+&lt; footter th:fragment=copy&gt;...&lt;/footer&gt;</code></pre><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;div th:insert="footer :: copy"&gt;&lt;/div&gt; </span><br><span class="line">&lt;div th:replace="footer :: copy"&gt;&lt;/div&gt; </span><br><span class="line">&lt;div th:include="footer :: copy"&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+
+<pre><code>三者的运行结果:</code></pre><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;div&gt; &lt;footer&gt;...&lt;/footer&gt; &lt;/div&gt;</span><br><span class="line"> &lt;footer&gt;...&lt;/footer&gt; </span><br><span class="line"> &lt;div&gt; ... &lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<p>由此可见，<strong>th:insert</strong>会连带着原来的加上外部<div>标签，<strong>th:replace</strong>就是原来的<strong>th:fragment</strong>中的标签，<strong>th:include</strong>会去除原来<strong>th:fragment</strong>中的最外层标签，替换成<strong>div</strong>标签</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://snoopy-code.github.io/2020/03/13/mybatis%E9%80%86%E5%90%91%E7%94%9F%E6%88%90%E5%99%A8%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E4%B8%AD%E5%AF%BB%E6%89%BEmysql%E9%A9%B1%E5%8A%A8%E4%BD%8D%E7%BD%AEclassPathEntry%E4%B8%AD%E7%9A%84location%E9%A1%B9/" data-id="ck7pu3ut20001c4j63iao28us" class="article-share-link">Share</a>
+      <a data-url="https://snoopy-code.github.io/2020/03/13/th_insert,th_replace,th_include/" data-id="ck7pv4byk000018j62envanja" class="article-share-link">Share</a>
       
       
     </footer>
@@ -109,19 +110,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2020/03/13/The%20server%20time%20zone%20value%20'_%D0%B9_______'%20is%20unrecognized%20or%20represents%20more%20than%20one%20time%20zone/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          The server time zone value &#39;_й_______&#39; is unrecognized or represents more than one time zone
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/03/13/WebMvcConfigurerAdapter%E8%BF%87%E6%97%B6%E7%9A%84%E6%9B%BF%E6%8D%A2%E6%96%B9%E6%B3%95/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2020/03/13/The%20server%20time%20zone%20value%20'_%D0%B9_______'%20is%20unrecognized%20or%20represents%20more%20than%20one%20time%20zone/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">WebMvcConfigurerAdapter过时的替换方法</div>
+      <div class="article-nav-title">The server time zone value &#39;_й_______&#39; is unrecognized or represents more than one time zone</div>
     </a>
   
 </nav>
