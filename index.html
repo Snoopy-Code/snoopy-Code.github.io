@@ -70,6 +70,56 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-MySQL表操作" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/03/15/MySQL%E8%A1%A8%E6%93%8D%E4%BD%9C/" class="article-date">
+  <time datetime="2020-03-15T09:19:46.000Z" itemprop="datePublished">2020-03-15</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/03/15/MySQL%E8%A1%A8%E6%93%8D%E4%BD%9C/">MySQL表操作</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="修改列名"><a href="#修改列名" class="headerlink" title="修改列名"></a>修改列名</h3><p>alter table 表名 change colume 原列名 新列名 列类型</p>
+<h3 id="修改列类型"><a href="#修改列类型" class="headerlink" title="修改列类型"></a>修改列类型</h3><p>alter table 表名 modify colume 列名 新类型</p>
+<h3 id="删除列"><a href="#删除列" class="headerlink" title="删除列"></a>删除列</h3><p>alter table 表名 drop colume 列名</p>
+<h3 id="修改表名"><a href="#修改表名" class="headerlink" title="修改表名"></a>修改表名</h3><p>alter table 表名 rename 【to 】 新表名 </p>
+<h3 id="添加列"><a href="#添加列" class="headerlink" title="添加列"></a>添加列</h3><p>alter table 表名 add colume 列名 列类型</p>
+<h3 id="删除表"><a href="#删除表" class="headerlink" title="删除表"></a>删除表</h3><p>drop table [if exists] 表名 </p>
+<h3 id="复制表"><a href="#复制表" class="headerlink" title="复制表"></a>复制表</h3><h4 id="只复制表的结构"><a href="#只复制表的结构" class="headerlink" title="只复制表的结构"></a>只复制表的结构</h4><p>create table 新表名 like 旧表名</p>
+<h4 id="复制表的结构和数据"><a href="#复制表的结构和数据" class="headerlink" title="复制表的结构和数据"></a>复制表的结构和数据</h4><p>create table 新表名</p>
+<p>select * from 旧表名 【where 筛选条件】</p>
+<p>如果只要部分表的字段</p>
+<p>create table 新表名</p>
+<p>select id,name</p>
+<p>from 旧表名</p>
+<p>where 0   &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;<strong>只需要让条件不满足，这样就差不到数据，只显示字段了！</strong></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://snoopy-code.github.io/2020/03/15/MySQL%E8%A1%A8%E6%93%8D%E4%BD%9C/" data-id="ck7sunq2x0000zcj66w8ja6ox" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-MySQL查询顺序" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/03/14/MySQL%E6%9F%A5%E8%AF%A2%E9%A1%BA%E5%BA%8F/" class="article-date">
@@ -420,44 +470,12 @@
 
 
   
-    <article id="post-MBG与MySQL版本问题" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/03/13/MBG%E4%B8%8EMySQL%E7%89%88%E6%9C%AC%E9%97%AE%E9%A2%98/" class="article-date">
-  <time datetime="2020-03-13T06:34:55.374Z" itemprop="datePublished">2020-03-13</time>
-</a>
+
+
+  <nav id="page-nav">
     
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/13/MBG%E4%B8%8EMySQL%E7%89%88%E6%9C%AC%E9%97%AE%E9%A2%98/">MBG与MySQL版本问题</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>  在使用Mybatis  Generator逆向工程时，生成相应的方法，会发现增删改查没有按主键增删改查的方法，查阅资料发现，导入MySQL的依赖时，系统默认会导入最新的版本，我看了jar包，发现给我导入的是8.x的版本，这就会出现没有按主键相应的方法，改变版本，使用5.1.48即可。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://snoopy-code.github.io/2020/03/13/MBG%E4%B8%8EMySQL%E7%89%88%E6%9C%AC%E9%97%AE%E9%A2%98/" data-id="ck7psmreo00038sj6e2hw5qka" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
+  </nav>
 
 </section>
         
@@ -488,6 +506,10 @@
       <ul>
         
           <li>
+            <a href="/2020/03/15/MySQL%E8%A1%A8%E6%93%8D%E4%BD%9C/">MySQL表操作</a>
+          </li>
+        
+          <li>
             <a href="/2020/03/14/MySQL%E6%9F%A5%E8%AF%A2%E9%A1%BA%E5%BA%8F/">MySQL查询顺序</a>
           </li>
         
@@ -501,10 +523,6 @@
         
           <li>
             <a href="/2020/03/13/mybatis%E9%80%86%E5%90%91%E7%94%9F%E6%88%90%E5%99%A8%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E4%B8%AD%E5%AF%BB%E6%89%BEmysql%E9%A9%B1%E5%8A%A8%E4%BD%8D%E7%BD%AEclassPathEntry%E4%B8%AD%E7%9A%84location%E9%A1%B9/">mybatis逆向生成器配置文件中寻找mysql驱动位置classPathEntry中的location项</a>
-          </li>
-        
-          <li>
-            <a href="/2020/03/13/WebMvcConfigurerAdapter%E8%BF%87%E6%97%B6%E7%9A%84%E6%9B%BF%E6%8D%A2%E6%96%B9%E6%B3%95/">WebMvcConfigurerAdapter过时的替换方法</a>
           </li>
         
       </ul>
