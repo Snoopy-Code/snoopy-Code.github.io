@@ -70,6 +70,46 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-MySQL易混淆知识点" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/03/16/MySQL%E6%98%93%E6%B7%B7%E6%B7%86%E7%9F%A5%E8%AF%86%E7%82%B9/" class="article-date">
+  <time datetime="2020-03-16T07:15:24.000Z" itemprop="datePublished">2020-03-16</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/03/16/MySQL%E6%98%93%E6%B7%B7%E6%B7%86%E7%9F%A5%E8%AF%86%E7%82%B9/">MySQL易混淆知识点</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="delete和truncate"><a href="#delete和truncate" class="headerlink" title="delete和truncate"></a>delete和truncate</h2><p> 1 delete删除后，标识从断点开始，truncate删除表示从1开始</p>
+<p> 2 delte后面可以加筛选条件where，truncate不可以</p>
+<p> 3 delete效率比truncate低一点</p>
+<p> 4 在事务中，delete可以回滚，truncate不可以回滚</p>
+<h2 id="主键和唯一键的异同点"><a href="#主键和唯一键的异同点" class="headerlink" title="主键和唯一键的异同点"></a>主键和唯一键的异同点</h2><h3 id="1-主键和唯一键都可以保证数据不可重复"><a href="#1-主键和唯一键都可以保证数据不可重复" class="headerlink" title="1 主键和唯一键都可以保证数据不可重复"></a>1 主键和唯一键都可以保证数据不可重复</h3><h3 id="2-主键至多只有一个，而唯一键可以有多个"><a href="#2-主键至多只有一个，而唯一键可以有多个" class="headerlink" title="2 主键至多只有一个，而唯一键可以有多个"></a>2 主键至多只有一个，而唯一键可以有多个</h3><h3 id="3-主键不可以为空，唯一键可以"><a href="#3-主键不可以为空，唯一键可以" class="headerlink" title="3 主键不可以为空，唯一键可以"></a>3 主键不可以为空，唯一键可以</h3><h2 id="视图和表"><a href="#视图和表" class="headerlink" title="视图和表"></a>视图和表</h2><h3 id="创建视图用view-表是table"><a href="#创建视图用view-表是table" class="headerlink" title="创建视图用view,表是table"></a>创建视图用view,表是table</h3><h3 id="视图占用的物理空间很小，只保存了sql逻辑"><a href="#视图占用的物理空间很小，只保存了sql逻辑" class="headerlink" title="视图占用的物理空间很小，只保存了sql逻辑"></a>视图占用的物理空间很小，只保存了sql逻辑</h3><h3 id="视图一般只用于查询，而表可以增删改查"><a href="#视图一般只用于查询，而表可以增删改查" class="headerlink" title="视图一般只用于查询，而表可以增删改查"></a>视图一般只用于查询，而表可以增删改查</h3>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://snoopy-code.github.io/2020/03/16/MySQL%E6%98%93%E6%B7%B7%E6%B7%86%E7%9F%A5%E8%AF%86%E7%82%B9/" data-id="ck7u572v700002cj6hnzpcxru" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-MySQL表操作" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/03/15/MySQL%E8%A1%A8%E6%93%8D%E4%BD%9C/" class="article-date">
@@ -433,43 +473,6 @@
 
 
   
-    <article id="post-ioc图标明明放在了静态文件夹中，为什么会不显示呢！" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/03/13/ioc%E5%9B%BE%E6%A0%87%E6%98%8E%E6%98%8E%E6%94%BE%E5%9C%A8%E4%BA%86%E9%9D%99%E6%80%81%E6%96%87%E4%BB%B6%E5%A4%B9%E4%B8%AD%EF%BC%8C%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BC%9A%E4%B8%8D%E6%98%BE%E7%A4%BA%E5%91%A2%EF%BC%81/" class="article-date">
-  <time datetime="2020-03-13T06:34:55.376Z" itemprop="datePublished">2020-03-13</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/13/ioc%E5%9B%BE%E6%A0%87%E6%98%8E%E6%98%8E%E6%94%BE%E5%9C%A8%E4%BA%86%E9%9D%99%E6%80%81%E6%96%87%E4%BB%B6%E5%A4%B9%E4%B8%AD%EF%BC%8C%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BC%9A%E4%B8%8D%E6%98%BE%E7%A4%BA%E5%91%A2%EF%BC%81/">ioc图标明明放在了静态文件夹中，为什么会不显示呢！</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>  这又是一个很容易出现的问题，首先你的图标名字不能出错，必须是<strong>favicon.ico</strong>，刷新网页不出现，且位置和名称都没有错误的话，那就要考虑浏览器的缓存问题，我用的是浏览器问题，清除缓存就可以了…</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://snoopy-code.github.io/2020/03/13/ioc%E5%9B%BE%E6%A0%87%E6%98%8E%E6%98%8E%E6%94%BE%E5%9C%A8%E4%BA%86%E9%9D%99%E6%80%81%E6%96%87%E4%BB%B6%E5%A4%B9%E4%B8%AD%EF%BC%8C%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BC%9A%E4%B8%8D%E6%98%BE%E7%A4%BA%E5%91%A2%EF%BC%81/" data-id="ck7psmrem00018sj6ehn5fe7w" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
@@ -506,6 +509,10 @@
       <ul>
         
           <li>
+            <a href="/2020/03/16/MySQL%E6%98%93%E6%B7%B7%E6%B7%86%E7%9F%A5%E8%AF%86%E7%82%B9/">MySQL易混淆知识点</a>
+          </li>
+        
+          <li>
             <a href="/2020/03/15/MySQL%E8%A1%A8%E6%93%8D%E4%BD%9C/">MySQL表操作</a>
           </li>
         
@@ -519,10 +526,6 @@
         
           <li>
             <a href="/2020/03/13/The%20server%20time%20zone%20value%20'_%D0%B9_______'%20is%20unrecognized%20or%20represents%20more%20than%20one%20time%20zone/">The server time zone value &#39;_й_______&#39; is unrecognized or represents more than one time zone</a>
-          </li>
-        
-          <li>
-            <a href="/2020/03/13/mybatis%E9%80%86%E5%90%91%E7%94%9F%E6%88%90%E5%99%A8%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E4%B8%AD%E5%AF%BB%E6%89%BEmysql%E9%A9%B1%E5%8A%A8%E4%BD%8D%E7%BD%AEclassPathEntry%E4%B8%AD%E7%9A%84location%E9%A1%B9/">mybatis逆向生成器配置文件中寻找mysql驱动位置classPathEntry中的location项</a>
           </li>
         
       </ul>
