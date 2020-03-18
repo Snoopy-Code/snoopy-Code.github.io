@@ -70,6 +70,46 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-Docker容器中的mysql插入数据无法使用中文" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/03/18/Docker%E5%AE%B9%E5%99%A8%E4%B8%AD%E7%9A%84mysql%E6%8F%92%E5%85%A5%E6%95%B0%E6%8D%AE%E6%97%A0%E6%B3%95%E4%BD%BF%E7%94%A8%E4%B8%AD%E6%96%87/" class="article-date">
+  <time datetime="2020-03-18T02:35:41.000Z" itemprop="datePublished">2020-03-18</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/03/18/Docker%E5%AE%B9%E5%99%A8%E4%B8%AD%E7%9A%84mysql%E6%8F%92%E5%85%A5%E6%95%B0%E6%8D%AE%E6%97%A0%E6%B3%95%E4%BD%BF%E7%94%A8%E4%B8%AD%E6%96%87/">Docker容器中的mysql插入数据无法使用中文</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="进入容器输入命令查看locale查看容器内支持的字符集"><a href="#进入容器输入命令查看locale查看容器内支持的字符集" class="headerlink" title="进入容器输入命令查看locale查看容器内支持的字符集"></a>进入容器输入命令查看locale查看容器内支持的字符集</h3><p>###会发现是POSIX,这个字符集是不支持中文的，需要将其改成utf8</p>
+<p>###使用命令 docker exec -it 容器名称 env LANG=C.UTF-8 /bin/bash</p>
+<p>###注意：这个是临时的，关闭容器后会重置字符集。</p>
+<p>###所以每次进入容器都需要设置，想要永久，需要在dockerfile中设置。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://snoopy-code.github.io/2020/03/18/Docker%E5%AE%B9%E5%99%A8%E4%B8%AD%E7%9A%84mysql%E6%8F%92%E5%85%A5%E6%95%B0%E6%8D%AE%E6%97%A0%E6%B3%95%E4%BD%BF%E7%94%A8%E4%B8%AD%E6%96%87/" data-id="ck7wpwkeg0000f0j64l260p53" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-安装MYSQL时出现libaio-so-1-is-needed-by-MySQL-server-5-5-31-2-el6-i686" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/03/17/%E5%AE%89%E8%A3%85MYSQL%E6%97%B6%E5%87%BA%E7%8E%B0libaio-so-1-is-needed-by-MySQL-server-5-5-31-2-el6-i686/" class="article-date">
@@ -439,43 +479,6 @@
 
 
   
-    <article id="post-Docker build细节" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/03/13/Docker%20build%E7%BB%86%E8%8A%82/" class="article-date">
-  <time datetime="2020-03-13T06:34:55.380Z" itemprop="datePublished">2020-03-13</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/13/Docker%20build%E7%BB%86%E8%8A%82/">Docker build细节</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>在Docker build命令句，需要注意的是他的结尾需要==空格加 .==，否则会出现<br>  <code>docker build&quot; requires exactly 1 argument. See &#39;docker build --help</code>的BUG，新手小白的我会会出现这么蠢的问题！</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://snoopy-code.github.io/2020/03/13/Docker%20build%E7%BB%86%E8%8A%82/" data-id="ck7pt47s30001i0j6drssazd1" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
@@ -512,6 +515,10 @@
       <ul>
         
           <li>
+            <a href="/2020/03/18/Docker%E5%AE%B9%E5%99%A8%E4%B8%AD%E7%9A%84mysql%E6%8F%92%E5%85%A5%E6%95%B0%E6%8D%AE%E6%97%A0%E6%B3%95%E4%BD%BF%E7%94%A8%E4%B8%AD%E6%96%87/">Docker容器中的mysql插入数据无法使用中文</a>
+          </li>
+        
+          <li>
             <a href="/2020/03/17/%E5%AE%89%E8%A3%85MYSQL%E6%97%B6%E5%87%BA%E7%8E%B0libaio-so-1-is-needed-by-MySQL-server-5-5-31-2-el6-i686/">安装MYSQL时出现libaio.so.1 is needed by MySQL-server-5.5.31-2.el6.i686</a>
           </li>
         
@@ -525,10 +532,6 @@
         
           <li>
             <a href="/2020/03/14/MySQL%E6%9F%A5%E8%AF%A2%E9%A1%BA%E5%BA%8F/">MySQL查询顺序</a>
-          </li>
-        
-          <li>
-            <a href="/2020/03/13/th_insert,th_replace,th_include/">th_insert,th_replace,th_include</a>
           </li>
         
       </ul>
