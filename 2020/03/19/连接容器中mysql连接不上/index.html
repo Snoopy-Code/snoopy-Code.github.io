@@ -5,21 +5,19 @@
   
 
   
-  <title>INOODB,MYISAM | Snoopy的博客</title>
+  <title>连接容器中mysql连接不上 | Snoopy的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="InooDB和MyISAM区别">
+  <meta name="description" content="需要进入宿主机的etc&#x2F;sysconfig&#x2F;iptables中对外暴露你容易所映射的端口默认里面只有一个22端口，正常模式下yy复制22所在行d粘贴至下一行，i进入编辑模式修改端口号注意需要重启一下iptables服务，service iptables restart">
 <meta property="og:type" content="article">
-<meta property="og:title" content="INOODB,MYISAM">
-<meta property="og:url" content="https://snoopy-code.github.io/2020/03/19/INOODB-MYISAM/index.html">
+<meta property="og:title" content="连接容器中mysql连接不上">
+<meta property="og:url" content="https://snoopy-code.github.io/2020/03/19/%E8%BF%9E%E6%8E%A5%E5%AE%B9%E5%99%A8%E4%B8%ADmysql%E8%BF%9E%E6%8E%A5%E4%B8%8D%E4%B8%8A/index.html">
 <meta property="og:site_name" content="Snoopy的博客">
-<meta property="og:description" content="InooDB和MyISAM区别">
+<meta property="og:description" content="需要进入宿主机的etc&#x2F;sysconfig&#x2F;iptables中对外暴露你容易所映射的端口默认里面只有一个22端口，正常模式下yy复制22所在行d粘贴至下一行，i进入编辑模式修改端口号注意需要重启一下iptables服务，service iptables restart">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20200319141000587.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3NjIwNDUy,size_16,color_FFFFFF,t_70">
-<meta property="article:published_time" content="2020-03-19T06:00:16.000Z">
-<meta property="article:modified_time" content="2020-03-19T06:13:33.310Z">
+<meta property="article:published_time" content="2020-03-19T06:56:21.000Z">
+<meta property="article:modified_time" content="2020-03-19T06:59:22.222Z">
 <meta property="article:author" content="Snoopy">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20200319141000587.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3NjIwNDUy,size_16,color_FFFFFF,t_70">
   
     <link rel="alternate" href="/atom.xml" title="Snoopy的博客" type="application/atom+xml">
   
@@ -72,10 +70,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-INOODB-MYISAM" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-连接容器中mysql连接不上" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/03/19/INOODB-MYISAM/" class="article-date">
-  <time datetime="2020-03-19T06:00:16.000Z" itemprop="datePublished">2020-03-19</time>
+    <a href="/2020/03/19/%E8%BF%9E%E6%8E%A5%E5%AE%B9%E5%99%A8%E4%B8%ADmysql%E8%BF%9E%E6%8E%A5%E4%B8%8D%E4%B8%8A/" class="article-date">
+  <time datetime="2020-03-19T06:56:21.000Z" itemprop="datePublished">2020-03-19</time>
 </a>
     
   </div>
@@ -86,7 +84,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      INOODB,MYISAM
+      连接容器中mysql连接不上
     </h1>
   
 
@@ -94,12 +92,11 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="InooDB和MyISAM区别"><a href="#InooDB和MyISAM区别" class="headerlink" title="InooDB和MyISAM区别"></a>InooDB和MyISAM区别</h2><p><img src="https://img-blog.csdnimg.cn/20200319141000587.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3NjIwNDUy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-
+        <h3 id="需要进入宿主机的etc-sysconfig-iptables中对外暴露你容易所映射的端口"><a href="#需要进入宿主机的etc-sysconfig-iptables中对外暴露你容易所映射的端口" class="headerlink" title="需要进入宿主机的etc/sysconfig/iptables中对外暴露你容易所映射的端口"></a>需要进入宿主机的etc/sysconfig/iptables中对外暴露你容易所映射的端口</h3><h3 id="默认里面只有一个22端口，正常模式下yy复制22所在行"><a href="#默认里面只有一个22端口，正常模式下yy复制22所在行" class="headerlink" title="默认里面只有一个22端口，正常模式下yy复制22所在行"></a>默认里面只有一个22端口，正常模式下yy复制22所在行</h3><h3 id="d粘贴至下一行，i进入编辑模式修改端口号"><a href="#d粘贴至下一行，i进入编辑模式修改端口号" class="headerlink" title="d粘贴至下一行，i进入编辑模式修改端口号"></a>d粘贴至下一行，i进入编辑模式修改端口号</h3><h3 id="注意需要重启一下iptables服务，service-iptables-restart"><a href="#注意需要重启一下iptables服务，service-iptables-restart" class="headerlink" title="注意需要重启一下iptables服务，service iptables restart"></a>注意需要重启一下iptables服务，service iptables restart</h3>
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://snoopy-code.github.io/2020/03/19/INOODB-MYISAM/" data-id="ck7yczqt7000074j604k1gzq7" class="article-share-link">Share</a>
+      <a data-url="https://snoopy-code.github.io/2020/03/19/%E8%BF%9E%E6%8E%A5%E5%AE%B9%E5%99%A8%E4%B8%ADmysql%E8%BF%9E%E6%8E%A5%E4%B8%8D%E4%B8%8A/" data-id="ck7yemkib0000coj684eocapq" class="article-share-link">Share</a>
       
       
     </footer>
@@ -108,19 +105,19 @@
     
 <nav id="article-nav">
   
-    <a href="/2020/03/19/%E8%BF%9E%E6%8E%A5%E5%AE%B9%E5%99%A8%E4%B8%ADmysql%E8%BF%9E%E6%8E%A5%E4%B8%8D%E4%B8%8A/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/03/19/%E5%BB%BA%E8%A1%A8%E6%B3%A8%E6%84%8F/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          连接容器中mysql连接不上
+          建表注意
         
       </div>
     </a>
   
   
-    <a href="/2020/03/18/Docker%E5%AE%B9%E5%99%A8%E4%B8%AD%E7%9A%84mysql%E6%8F%92%E5%85%A5%E6%95%B0%E6%8D%AE%E6%97%A0%E6%B3%95%E4%BD%BF%E7%94%A8%E4%B8%AD%E6%96%87/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2020/03/19/INOODB-MYISAM/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Docker容器中的mysql插入数据无法使用中文</div>
+      <div class="article-nav-title">INOODB,MYISAM</div>
     </a>
   
 </nav>
