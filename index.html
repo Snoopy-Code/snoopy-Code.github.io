@@ -92,11 +92,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="进入容器输入命令查看locale查看容器内支持的字符集"><a href="#进入容器输入命令查看locale查看容器内支持的字符集" class="headerlink" title="进入容器输入命令查看locale查看容器内支持的字符集"></a>进入容器输入命令查看locale查看容器内支持的字符集</h3><p>###会发现是POSIX,这个字符集是不支持中文的，需要将其改成utf8</p>
-<p>###使用命令 docker exec -it 容器名称 env LANG=C.UTF-8 /bin/bash</p>
-<p>###注意：这个是临时的，关闭容器后会重置字符集。</p>
-<p>###所以每次进入容器都需要设置，想要永久，需要在dockerfile中设置。</p>
-
+        <h3 id="进入容器输入命令查看locale查看容器内支持的字符集"><a href="#进入容器输入命令查看locale查看容器内支持的字符集" class="headerlink" title="进入容器输入命令查看locale查看容器内支持的字符集"></a>进入容器输入命令查看locale查看容器内支持的字符集</h3><h3 id="会发现是POSIX-这个字符集是不支持中文的，需要将其改成utf8"><a href="#会发现是POSIX-这个字符集是不支持中文的，需要将其改成utf8" class="headerlink" title="会发现是POSIX,这个字符集是不支持中文的，需要将其改成utf8"></a>会发现是POSIX,这个字符集是不支持中文的，需要将其改成utf8</h3><h3 id="使用命令-docker-exec-it-容器名称-env-LANG-C-UTF-8-bin-bash"><a href="#使用命令-docker-exec-it-容器名称-env-LANG-C-UTF-8-bin-bash" class="headerlink" title="使用命令 docker exec -it 容器名称 env LANG=C.UTF-8 /bin/bash"></a>使用命令 docker exec -it 容器名称 env LANG=C.UTF-8 /bin/bash</h3><h3 id="注意：这个是临时的，关闭容器后会重置字符集。"><a href="#注意：这个是临时的，关闭容器后会重置字符集。" class="headerlink" title="注意：这个是临时的，关闭容器后会重置字符集。"></a>注意：这个是临时的，关闭容器后会重置字符集。</h3><h3 id="所以每次进入容器都需要设置，想要永久，需要在dockerfile中设置。"><a href="#所以每次进入容器都需要设置，想要永久，需要在dockerfile中设置。" class="headerlink" title="所以每次进入容器都需要设置，想要永久，需要在dockerfile中设置。"></a>所以每次进入容器都需要设置，想要永久，需要在dockerfile中设置。</h3>
       
     </div>
     <footer class="article-footer">
