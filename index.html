@@ -70,6 +70,42 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-mysql索引今日小总结" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/03/20/mysql%E7%B4%A2%E5%BC%95%E4%BB%8A%E6%97%A5%E5%B0%8F%E6%80%BB%E7%BB%93/" class="article-date">
+  <time datetime="2020-03-20T13:14:26.000Z" itemprop="datePublished">2020-03-20</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/03/20/mysql%E7%B4%A2%E5%BC%95%E4%BB%8A%E6%97%A5%E5%B0%8F%E6%80%BB%E7%BB%93/">mysql索引今日小总结</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="索引就是能够快速查找的排好序的数据结构"><a href="#索引就是能够快速查找的排好序的数据结构" class="headerlink" title="索引就是能够快速查找的排好序的数据结构"></a>索引就是能够快速查找的排好序的数据结构</h3><h3 id="可以使用explain-SQL语句对于语句进行优化，没有处理的SQL语句，他的Type都是ALL，即"><a href="#可以使用explain-SQL语句对于语句进行优化，没有处理的SQL语句，他的Type都是ALL，即" class="headerlink" title="可以使用explain+SQL语句对于语句进行优化，没有处理的SQL语句，他的Type都是ALL，即"></a>可以使用explain+SQL语句对于语句进行优化，没有处理的SQL语句，他的Type都是ALL，即</h3><h3 id="全变搜索，这样当数据很多的时候就会很慢。根据SQL语句后面的条件适当的进行的索引建立"><a href="#全变搜索，这样当数据很多的时候就会很慢。根据SQL语句后面的条件适当的进行的索引建立" class="headerlink" title="全变搜索，这样当数据很多的时候就会很慢。根据SQL语句后面的条件适当的进行的索引建立"></a>全变搜索，这样当数据很多的时候就会很慢。根据SQL语句后面的条件适当的进行的索引建立</h3><h3 id="一般建立比较多的索引是复合索引，在查询语句时尽量少用-，可以使用覆盖索引，尽可能的精确"><a href="#一般建立比较多的索引是复合索引，在查询语句时尽量少用-，可以使用覆盖索引，尽可能的精确" class="headerlink" title="一般建立比较多的索引是复合索引，在查询语句时尽量少用*，可以使用覆盖索引，尽可能的精确"></a>一般建立比较多的索引是复合索引，在查询语句时尽量少用*，可以使用覆盖索引，尽可能的精确</h3><h3 id="到指定字段。"><a href="#到指定字段。" class="headerlink" title="到指定字段。"></a>到指定字段。</h3><h3 id="对于索引失效问题，例如建立复合索引-create-index-索引名-on-表名-字段…"><a href="#对于索引失效问题，例如建立复合索引-create-index-索引名-on-表名-字段…" class="headerlink" title="对于索引失效问题，例如建立复合索引 create index 索引名 on 表名(字段…)"></a>对于索引失效问题，例如建立复合索引 create index 索引名 on 表名(字段…)</h3><h3 id="例如index-a-b-c）"><a href="#例如index-a-b-c）" class="headerlink" title="例如index(a,b,c）"></a>例如index(a,b,c）</h3><h3 id="首先呢，全职匹配是最好的，select-a-b-c-from-…-这样的查询符合覆盖索引，索引也不会失效"><a href="#首先呢，全职匹配是最好的，select-a-b-c-from-…-这样的查询符合覆盖索引，索引也不会失效" class="headerlink" title="首先呢，全职匹配是最好的，select a,b,c from …..这样的查询符合覆盖索引，索引也不会失效"></a>首先呢，全职匹配是最好的，select a,b,c from …..这样的查询符合覆盖索引，索引也不会失效</h3><h3 id="其次就是最左前缀法则，你所查询的条件必须是以a为开头，尽量不要跳中间，就是select-from-a"><a href="#其次就是最左前缀法则，你所查询的条件必须是以a为开头，尽量不要跳中间，就是select-from-a" class="headerlink" title="其次就是最左前缀法则，你所查询的条件必须是以a为开头，尽量不要跳中间，就是select * from a"></a>其次就是最左前缀法则，你所查询的条件必须是以a为开头，尽量不要跳中间，就是select * from a</h3><h3 id="where-a-‘a1’and-c-’c1’-where后面必须以a为第一个条件，否则索引失效，中间不要跳"><a href="#where-a-‘a1’and-c-’c1’-where后面必须以a为第一个条件，否则索引失效，中间不要跳" class="headerlink" title="where a = ‘a1’and c=’c1’,where后面必须以a为第一个条件，否则索引失效，中间不要跳###"></a>where a = ‘a1’and c=’c1’,where后面必须以a为第一个条件，否则索引失效，中间不要跳###</h3><h3 id="这句SQL跳了b，所以后面的索引会失效，只适用了部分索引"><a href="#这句SQL跳了b，所以后面的索引会失效，只适用了部分索引" class="headerlink" title="这句SQL跳了b，所以后面的索引会失效，只适用了部分索引"></a>这句SQL跳了b，所以后面的索引会失效，只适用了部分索引</h3><h3 id="第三，不要在索引上做任何计算，函数，以及隐式的类型转换，否则会失效。"><a href="#第三，不要在索引上做任何计算，函数，以及隐式的类型转换，否则会失效。" class="headerlink" title="第三，不要在索引上做任何计算，函数，以及隐式的类型转换，否则会失效。"></a>第三，不要在索引上做任何计算，函数，以及隐式的类型转换，否则会失效。</h3><h3 id="第四呢，就是字段使用范围条件，比例-gt-lt-between-and-in-等等，会使该字段后面的索引失效"><a href="#第四呢，就是字段使用范围条件，比例-gt-lt-between-and-in-等等，会使该字段后面的索引失效" class="headerlink" title="第四呢，就是字段使用范围条件，比例&gt; ,&lt; ,between and ,in 等等，会使该字段后面的索引失效"></a>第四呢，就是字段使用范围条件，比例&gt; ,&lt; ,between and ,in 等等，会使该字段后面的索引失效</h3><h3 id="尽可能的少使用select-，多使用覆盖索引"><a href="#尽可能的少使用select-，多使用覆盖索引" class="headerlink" title="尽可能的少使用select *，多使用覆盖索引"></a>尽可能的少使用select *，多使用覆盖索引</h3><h3 id="SQL语句在使用-lt-gt-is-null或is-not-null-都会使索引失效"><a href="#SQL语句在使用-lt-gt-is-null或is-not-null-都会使索引失效" class="headerlink" title="SQL语句在使用!= , &lt;&gt;,is null或is not null 都会使索引失效"></a>SQL语句在使用!= , &lt;&gt;,is null或is not null 都会使索引失效</h3><h3 id="like通配符只可以放在字段右边，就是’aa-’-不可以’-aa-’或者’-a’，因为前面说了最左前缀法则"><a href="#like通配符只可以放在字段右边，就是’aa-’-不可以’-aa-’或者’-a’，因为前面说了最左前缀法则" class="headerlink" title="like通配符只可以放在字段右边，就是’aa%’,不可以’%aa%’或者’%a’，因为前面说了最左前缀法则"></a>like通配符只可以放在字段右边，就是’aa%’,不可以’%aa%’或者’%a’，因为前面说了最左前缀法则</h3><h3 id="开头使用了-不知道到底里面包含几个字段，所以索引失效"><a href="#开头使用了-不知道到底里面包含几个字段，所以索引失效" class="headerlink" title="开头使用了%,不知道到底里面包含几个字段，所以索引失效"></a>开头使用了%,不知道到底里面包含几个字段，所以索引失效</h3><h3 id="varchar类型的数据不可以不加单引号括起来，否则会失效，虽然看着很低级，但是如果name字段是"><a href="#varchar类型的数据不可以不加单引号括起来，否则会失效，虽然看着很低级，但是如果name字段是" class="headerlink" title="varchar类型的数据不可以不加单引号括起来，否则会失效，虽然看着很低级，但是如果name字段是"></a>varchar类型的数据不可以不加单引号括起来，否则会失效，虽然看着很低级，但是如果name字段是</h3><h3 id="varchar类型，假如name是2000，那么会很容易手误写成name-2000…"><a href="#varchar类型，假如name是2000，那么会很容易手误写成name-2000…" class="headerlink" title="varchar类型，假如name是2000，那么会很容易手误写成name =2000…"></a>varchar类型，假如name是2000，那么会很容易手误写成name =2000…</h3><h3 id="尽可能少用or，用它来连接时会使索引失效，但并不是一点都不能用"><a href="#尽可能少用or，用它来连接时会使索引失效，但并不是一点都不能用" class="headerlink" title="尽可能少用or，用它来连接时会使索引失效，但并不是一点都不能用"></a>尽可能少用or，用它来连接时会使索引失效，但并不是一点都不能用</h3><h3 id="其次就是在用explain优化sql时，查看执行结果注意个字段的含义，尤其id-type-select-type-key"><a href="#其次就是在用explain优化sql时，查看执行结果注意个字段的含义，尤其id-type-select-type-key" class="headerlink" title="其次就是在用explain优化sql时，查看执行结果注意个字段的含义，尤其id type select_type key"></a>其次就是在用explain优化sql时，查看执行结果注意个字段的含义，尤其id type select_type key</h3>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://snoopy-code.github.io/2020/03/20/mysql%E7%B4%A2%E5%BC%95%E4%BB%8A%E6%97%A5%E5%B0%8F%E6%80%BB%E7%BB%93/" data-id="ck80853ce0000h8j6a77i1nrq" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-建表注意" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/03/19/%E5%BB%BA%E8%A1%A8%E6%B3%A8%E6%84%8F/" class="article-date">
@@ -432,46 +468,6 @@
 
 
   
-    <article id="post-The server time zone value &#39;_й_______&#39; is unrecognized or represents more than one time zone" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/03/13/The%20server%20time%20zone%20value%20'_%D0%B9_______'%20is%20unrecognized%20or%20represents%20more%20than%20one%20time%20zone/" class="article-date">
-  <time datetime="2020-03-13T07:01:56.958Z" itemprop="datePublished">2020-03-13</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/13/The%20server%20time%20zone%20value%20'_%D0%B9_______'%20is%20unrecognized%20or%20represents%20more%20than%20one%20time%20zone/">The server time zone value &#39;_й_______&#39; is unrecognized or represents more than one time zone</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>错误原因：</p>
-<p>使用了 Mysql 最新版驱动</p>
-<p>解决方案：</p>
-<p>在项目代码-数据库连接 URL 后，加上 （注意大小写必须一致）<br><strong>?serverTimezone=UTC</strong></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://snoopy-code.github.io/2020/03/13/The%20server%20time%20zone%20value%20'_%D0%B9_______'%20is%20unrecognized%20or%20represents%20more%20than%20one%20time%20zone/" data-id="ck7pu3usv0000c4j6b18g6zff" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
@@ -508,6 +504,10 @@
       <ul>
         
           <li>
+            <a href="/2020/03/20/mysql%E7%B4%A2%E5%BC%95%E4%BB%8A%E6%97%A5%E5%B0%8F%E6%80%BB%E7%BB%93/">mysql索引今日小总结</a>
+          </li>
+        
+          <li>
             <a href="/2020/03/19/%E5%BB%BA%E8%A1%A8%E6%B3%A8%E6%84%8F/">建表注意</a>
           </li>
         
@@ -521,10 +521,6 @@
         
           <li>
             <a href="/2020/03/18/Docker%E5%AE%B9%E5%99%A8%E4%B8%AD%E7%9A%84mysql%E6%8F%92%E5%85%A5%E6%95%B0%E6%8D%AE%E6%97%A0%E6%B3%95%E4%BD%BF%E7%94%A8%E4%B8%AD%E6%96%87/">Docker容器中的mysql插入数据无法使用中文</a>
-          </li>
-        
-          <li>
-            <a href="/2020/03/17/%E5%AE%89%E8%A3%85MYSQL%E6%97%B6%E5%87%BA%E7%8E%B0libaio-so-1-is-needed-by-MySQL-server-5-5-31-2-el6-i686/">安装MYSQL时出现libaio.so.1 is needed by MySQL-server-5.5.31-2.el6.i686</a>
           </li>
         
       </ul>
