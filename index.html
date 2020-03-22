@@ -70,6 +70,43 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-虚拟机启动不了" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/03/22/%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%90%AF%E5%8A%A8%E4%B8%8D%E4%BA%86/" class="article-date">
+  <time datetime="2020-03-22T05:49:21.000Z" itemprop="datePublished">2020-03-22</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/03/22/%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%90%AF%E5%8A%A8%E4%B8%8D%E4%BA%86/">虚拟机启动不了</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="今天手贱想要给自己的linux桌面换背景，当时点击没有效果，想着平时windows系统重启一下就可以了"><a href="#今天手贱想要给自己的linux桌面换背景，当时点击没有效果，想着平时windows系统重启一下就可以了" class="headerlink" title="今天手贱想要给自己的linux桌面换背景，当时点击没有效果，想着平时windows系统重启一下就可以了"></a>今天手贱想要给自己的linux桌面换背景，当时点击没有效果，想着平时windows系统重启一下就可以了</h3><h3 id="然后就出现了这一幕…"><a href="#然后就出现了这一幕…" class="headerlink" title="然后就出现了这一幕…"></a>然后就出现了这一幕…</h3><p><img src="https://img-blog.csdnimg.cn/20200322134645845.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3NjIwNDUy,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<h3 id="查阅资料发现是因为自己更换了桌面背景导致了系统的内核信息发生了紊乱，我吐了"><a href="#查阅资料发现是因为自己更换了桌面背景导致了系统的内核信息发生了紊乱，我吐了" class="headerlink" title="查阅资料发现是因为自己更换了桌面背景导致了系统的内核信息发生了紊乱，我吐了"></a>查阅资料发现是因为自己更换了桌面背景导致了系统的内核信息发生了紊乱，我吐了</h3><h3 id="解决办法重启该虚拟机，手按Esc，进入驱动选择，选择老一点的版本启动该虚拟机即可…"><a href="#解决办法重启该虚拟机，手按Esc，进入驱动选择，选择老一点的版本启动该虚拟机即可…" class="headerlink" title="解决办法重启该虚拟机，手按Esc，进入驱动选择，选择老一点的版本启动该虚拟机即可…"></a>解决办法重启该虚拟机，手按Esc，进入驱动选择，选择老一点的版本启动该虚拟机即可…</h3>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://snoopy-code.github.io/2020/03/22/%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%90%AF%E5%8A%A8%E4%B8%8D%E4%BA%86/" data-id="ck82mkjg70000okj63wxf1wn8" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-MySQL学习BUG“" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/03/21/MySQL%E5%AD%A6%E4%B9%A0BUG%E2%80%9C/" class="article-date">
@@ -418,52 +455,6 @@
 
 
   
-    <article id="post-MySQL查询顺序" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/03/14/MySQL%E6%9F%A5%E8%AF%A2%E9%A1%BA%E5%BA%8F/" class="article-date">
-  <time datetime="2020-03-14T14:12:15.000Z" itemprop="datePublished">2020-03-14</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/14/MySQL%E6%9F%A5%E8%AF%A2%E9%A1%BA%E5%BA%8F/">MySQL查询顺序</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="多条件查询时的顺序"><a href="#多条件查询时的顺序" class="headerlink" title="多条件查询时的顺序"></a>多条件查询时的顺序</h2><p><strong>select</strong> 查询字段 &nbsp;&nbsp;&nbsp;⑦</p>
-<p><strong>from</strong> 表  &nbsp;&nbsp;&nbsp; ①</p>
-<p>【连接类型】<strong>join</strong>  &nbsp;&nbsp;&nbsp; ②</p>
-<p><strong>ON</strong> 查询条件 &nbsp;&nbsp;&nbsp;③</p>
-<p><strong>where</strong> 筛选条件 &nbsp;&nbsp;&nbsp;④</p>
-<p><strong>group by</strong> &nbsp;&nbsp;&nbsp;⑤</p>
-<p><strong>having</strong> 筛选条件&nbsp;&nbsp;&nbsp;⑥</p>
-<p><strong>order by</strong>&nbsp;&nbsp;&nbsp;⑧</p>
-<p><strong>limit</strong> &nbsp;&nbsp;&nbsp;⑨</p>
-<p>当where后面的条件不是标量子查询时，即查询结果为一行一列时，可以使用在from后面添加子查询，作为一个新表，起别名用内连接查询。<br>或者也可以在where后面使用in关键字查询，in里面的子查询可以列子查询也可以是标量子查询。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://snoopy-code.github.io/2020/03/14/MySQL%E6%9F%A5%E8%AF%A2%E9%A1%BA%E5%BA%8F/" data-id="ck7rqvxrl000068j6ddgfhoiy" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
@@ -500,6 +491,10 @@
       <ul>
         
           <li>
+            <a href="/2020/03/22/%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%90%AF%E5%8A%A8%E4%B8%8D%E4%BA%86/">虚拟机启动不了</a>
+          </li>
+        
+          <li>
             <a href="/2020/03/21/MySQL%E5%AD%A6%E4%B9%A0BUG%E2%80%9C/">MySQL学习BUG“</a>
           </li>
         
@@ -513,10 +508,6 @@
         
           <li>
             <a href="/2020/03/19/%E8%BF%9E%E6%8E%A5%E5%AE%B9%E5%99%A8%E4%B8%ADmysql%E8%BF%9E%E6%8E%A5%E4%B8%8D%E4%B8%8A/">连接容器中mysql连接不上</a>
-          </li>
-        
-          <li>
-            <a href="/2020/03/19/INOODB-MYISAM/">INOODB,MYISAM</a>
           </li>
         
       </ul>
